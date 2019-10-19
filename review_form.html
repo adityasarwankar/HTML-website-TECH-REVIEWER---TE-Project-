@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+ <head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width , initial-scale=1">
+    <title>Review Form</title>
+    <link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+ 
+ <body>
+
+<form class="box" action="insert.php" method="post" onSubmit="return validateForm();">
+  <br>
+  <h1>Product Review</h1>
+	<hr STYLE="border: 1px solid white"; align="center" width="85%">
+
+<div>
+<input type="text" id="data_2" name="NAME" style="width : 450px;" class="form-control" placeholder="Username" />
+<input type="text" id="data_3" name="EMAIL" style="width : 450px;" class="form-control" placeholder="Email"/>
+</div>
+
+<p>Which product did you buy?</p>
+<select id="data_4" name="BRAND" style="width : 450px; cursor: pointer;" class="form-control">
+	<option value="SAMSUNG">SAMSUNG</option>
+	<option value="XIAOMI">XIAOMI</option>
+	<option value="ONE_PLUS">ONE_PLUS</option>
+	<option value="NOKIA">NOKIA</option>
+	<option value="LENOVO">LENOVO</option>
+	<option value="HUAWEI">HUAWEI</option>
+	<option value="OTHER">OTHER (mention it in Review text)</option>
+</select>
+
+<div><input type="text" id="data_5" name="MODEL" style="width : 450px;" class="form-control" placeholder="MOBILE MODEL NO"/>
+<p>Give Rating</p>
+</div>
+
+<select id="data_6" name="RATING" style="width : 450px;" class="form-control">
+	<option value="">--select--</option>
+	<option value="1">1</option>
+	<option value="1.5">1.5</option>
+	<option value="2.0">2.0</option>
+	<option value="2.5">2.5</option>
+	<option value="3.0">3.0</option>
+	<option value="3.5">3.5</option>
+	<option value="4.0">4.0</option>
+	<option value="4.5">4.5</option>
+	<option value="5">5</option>
+</select>
+
+<div>
+	<textarea id="data_8" name="REVIEW" style="width : 450px;" rows="3" class="form-control" placeholder="REVIEW" ></textarea>
+</div>
+
+<div style="padding-bottom: 18px;">Would you recommend this product?<br/>
+	<span><input type="radio" id="y" name="DECIDE" value="Yes"/> Yes</span><br/>
+	<span><input type="radio" id="n" name="DECIDE" value="No"/> No</span><br/>
+	<span><input type="radio" id="o" name="DECIDE" value="Other"/>I am not sure</span><br/>
+</div>
+
+<div style="padding-bottom: 18px;"><input name="skip_Submit" value="Submit" type="submit"/></div>
+
+<hr STYLE="border: 1px solid white"; align="left" width="100%">
+
+<div style="float:right"><div class="button"><a href="home.html" style="color: white"><span>Return Home</a> </span></div></div>
+<div style="float:right"><a href="#" class="fa fa-twitter"></a></div>
+<div style="float:right"><a href="#" class="fa fa-google"></a></div>
+
+<p STYLE="font-size: 20px"; align="centre-left">&copy; 2019 TechReviewer.com<p>
+</form>
+
+<script type="text/javascript">
+	function validateForm() {
+	if (isEmpty(document.getElementById('data_2').value.trim())) {
+	alert('Reviewers NAME is required!');
+	return false;}
+
+	if (isEmpty(document.getElementById('data_3').value.trim())) {
+	alert('E-mail id is required!');
+	return false;
+	}
+	if (isEmpty(document.getElementById('data_5').value.trim())) {
+	alert('Model Number is required!');
+	return false;
+	}			
+	if (isEmpty(document.getElementById('data_6').value.trim())) {
+	alert('Give Prdouct Rating');
+	return false;
+	}
+	if (isEmpty(document.getElementById('data_8').value.trim())) {
+	alert('Review is required!');
+	return false;
+	}
+	return true;
+	}
+	function isEmpty(str) { return (str.length === 0 || !str.trim()); }
+	function validateEmail(email) {
+	var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,15}(?:\.[a-z]{2})?)$/i;
+	return isEmpty(email) || re.test(email);
+	}
+</script>
+
+ </body>
+</html>
