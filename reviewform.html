@@ -1,0 +1,75 @@
+<html>
+<head>
+<title>HOME Tech Reviewer</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/style1.css">
+<link rel="stylesheet" href="css/style2.css">
+<link rel="stylesheet" href="form.css">
+<link href='https://fonts.googleapis.com/css?family=Montserrat:thin,extra-light,light,100,200,300,400,500,600,700,800'
+rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="icon" href="tr1.jpg" type="image/gif" sizes="16x16">
+
+</head>
+
+<body bgcolor="wheat">
+<div class="header">
+  <h1>TECH-REVIEWER<i class="fa fa-mobile-phone" style="font-size:48px;color:white"></i></h1>
+  <p style="font-size:70%;"><u>TECH THAT MATTERS</u></p>
+</div>
+
+
+<section>
+<form class="box" action="insert.php" onSubmit = "return checkPassword(this)" method="post">
+  <h1>Product Review</h1>
+  <hr STYLE="border: 1px solid white"; align="center" width="85%">
+
+  <input type="text" placeholder="Username" name="NAME" required>
+  <input type="email" placeholder="E-Mail" name="EMAIL" required>
+
+  
+  <select name="BRAND" style="width : 200px; cursor: pointer;" required>
+    <option value="">--Product Brand--</option>
+    <option value="SAMSUNG">SAMSUNG</option>
+    <option value="XIAOMI">XIAOMI</option>
+    <option value="ONE_PLUS">ONE_PLUS</option>
+    <option value="NOKIA">NOKIA</option>
+    <option value="LENOVO">LENOVO</option>
+    <option value="HUAWEI">HUAWEI</option>
+    <option value="OTHER">OTHER (mention it in Review text)</option>
+  </select>
+
+  <input type="text" placeholder="MOBILE MODEL" name="MODEL" required>
+
+  <select name="RATING" style="width : 200px;" required>
+      <option value="">--select Rating--</option>
+      <option value="1">1</option>
+      <option value="1.5">1.5</option>
+      <option value="2.0">2.0</option>
+      <option value="2.5">2.5</option>
+      <option value="3.0">3.0</option>
+      <option value="3.5">3.5</option>
+      <option value="4.0">4.0</option>
+      <option value="4.5">4.5</option>
+      <option value="5">5</option>
+    </select>
+
+    <textarea name="REVIEW" style="width : 300px;" rows="3" placeholder="REVIEW" required></textarea>
+
+    <div style="padding-bottom: 18px; color: aliceblue;font-family: Montserrat;">Would you recommend this product?<br/>
+      <span><input type="radio" id="y" name="DECIDE" value="Yes"/>Yes(good)</span><br/>
+      <span><input type="radio" id="n" name="DECIDE" value="No"/>No(okay)</span><br/>
+      <span><input type="radio" id="o" name="DECIDE" value="Other"/>Not sure</span><br/>
+    </div>
+
+
+<input type="submit" name="skip_Submit" value="Submit">
+
+<hr STYLE="border: 1px solid white"; align="center" width="60%">
+<p STYLE="font-size: 20px;color:white">&copy; 2019 TechReviewer.com <img src="tr1.jpg" width="30px"></p>
+</form>
+
+</section>
+</body>
+</html>

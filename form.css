@@ -1,0 +1,87 @@
+.box {
+    width: 650px;
+    padding: 20px;
+    position: absolute;
+    top: 90%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    background: #2b2b2b;
+    text-align: center;
+    border-radius: 15px;
+  
+  }
+  .box h1{
+    color: white;
+    font-family: Montserrat;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  .box input[type="text"],.box input[type="email"],.box select{
+    border:0;
+    font-family: Montserrat;
+    background: none;
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+    border : 2px solid #00cec9;
+    padding:14px 10px;
+    width: 200px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+  }
+  .box input[type="submit"]{
+    border: 0;
+    font-family: Montserrat;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #55efc4;
+    padding: 14px 40px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+  }
+  .box input[type="submit"]:hover{
+    background: #55efc4;
+  }
+
+  .box input[type="text"]:focus,.box input[type="email"]:focus{
+    width: 280px;
+    border-color: #a29bfe;
+  }
+  .box select{
+  border:0;
+  background: #0A627B;
+  display: block;
+  margin: 20px auto;
+  text-align: right;
+  font-family: Montserrat;
+  border: 2px solid #3498db;
+  padding: 14px 10px;
+  width: 200px;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+	
+}
+.box textarea{
+border:0;
+ background: none;
+ display: block;
+ margin: 20px auto;
+ text-align: center;
+ border: 2px solid #3498db;
+ padding: 14px 10px;
+ width: 250px;
+ outline: none;
+ color: white;
+ border-radius: 24px;
+ transition: 0.25s;
+   
+}  
